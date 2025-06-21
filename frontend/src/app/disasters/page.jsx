@@ -12,7 +12,7 @@ export default function AllDisasters() {
         const res = await api.get("/disasters");
         setDisasters(res.data);
       } catch (err) {
-        console.error("❌ Error fetching disasters:", err);
+        console.error("Error fetching disasters:", err);
       }
     }
     fetchDisasters();
