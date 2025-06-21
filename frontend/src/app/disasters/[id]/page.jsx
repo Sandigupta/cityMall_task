@@ -19,7 +19,7 @@ export default async function DisasterDetailPage({ params }) {
   }
 
   // ✅ Proper API fetch
-  const res = await fetch(`http://localhost:5000/disasters/${id}`, {
+  const res = await fetch(`https://citymall-task-3.onrender.com/disasters/${id}`, {
     cache: "no-store",
   });
 
