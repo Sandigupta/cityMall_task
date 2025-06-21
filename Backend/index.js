@@ -10,6 +10,7 @@ import socialRoutes from "./routes/social.js";
 import updatesRoutes from "./routes/updates.js";
 import verifyRoutes from "./routes/verify.js";
 import resourceRoutes from "./routes/resources.js";
+import rateLimiter from './middleware/rateLimiter.js';
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -21,8 +22,12 @@ const io = new Server(server, {
   },
 });
 
+
+
 app.use(cors());
 app.use(express.json());
+app.use(rateLimiter); // applies to all routes
+
 app.use(morgan("dev"));
 app.get("/test-supabase", async (req, res) => {
   try {

@@ -7,7 +7,7 @@ import ReportForm from "@/components/ReportForm";
 
 export default async function DisasterDetailPage({ params }) {
   // ✅ This is fine
-  const id = params.id;
+  const { id } = await params;
 
   // ✅ Basic validation
   if (!id) {
