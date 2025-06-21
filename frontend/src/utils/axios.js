@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000", // backend running here
+  baseURL: "https://citymall-task-3.onrender.com", // backend running here
   headers: {
     "Content-Type": "application/json",
   },
