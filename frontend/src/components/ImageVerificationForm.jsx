@@ -22,10 +22,10 @@ export default function ImageVerificationForm({ disasterId }) {
       if (response.data?.result) {
         setResult(response.data.result);
       } else {
-        setResult("❗ Gemini API returned no result.");
+        setResult("Gemini API returned no result.");
       }
     } catch (err) {
-      console.error("❌ Error verifying image:", err);
+      console.error("Error verifying image:", err);
       setErrorMsg(err.response?.data?.details || "Something went wrong.");
     } finally {
       setLoading(false);
@@ -51,13 +51,13 @@ export default function ImageVerificationForm({ disasterId }) {
           className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
           disabled={loading}
         >
-          {loading ? "Verifying..." : "✅ Verify Image"}
+          {loading ? "Verifying..." : "Verify Image"}
         </button>
       </form>
 
       {errorMsg && (
         <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
-          ❌ {errorMsg}
+          {errorMsg}
         </div>
       )}
 
