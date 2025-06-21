@@ -25,9 +25,9 @@ export default function NewDisasterForm() {
         tags: form.tags.split(",").map((t) => t.trim()),
       };
       const res = await api.post("/disasters", payload);
-      alert("✅ Disaster created!");
+      alert("Disaster created!");
     } catch (err) {
-      console.error("❌ Error creating disaster:", err);
+      console.error("Error creating disaster:", err);
       alert("Something went wrong.");
     }
   };
@@ -102,7 +102,7 @@ export default function NewDisasterForm() {
           type="submit"
           className="w-full py-3 bg-blue-600 text-white font-semibold rounded-xl shadow hover:bg-blue-700 transition-all duration-200"
         >
-          🚨 Submit Disaster Report
+          Submit Disaster Report
         </button>
       </form>
     </div>
