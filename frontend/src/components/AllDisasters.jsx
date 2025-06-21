@@ -12,7 +12,7 @@ export default function AllDisasters() {
       const res = await api.get("/disasters");
       setDisasters(res.data);
     } catch (err) {
-      console.error("❌ Error fetching disasters:", err);
+      console.error("Error fetching disasters:", err);
     }
   }
 
@@ -20,7 +20,7 @@ export default function AllDisasters() {
     fetchDisasters(); // Initial load
 
     socket.on("disaster_updated", () => {
-      console.log("🔄 Disaster update received");
+      console.log("Disaster update received");
       fetchDisasters(); // Re-fetch on change
     });
 
