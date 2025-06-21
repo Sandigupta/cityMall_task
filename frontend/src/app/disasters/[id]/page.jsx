@@ -19,9 +19,13 @@ export default async function DisasterDetailPage({ params }) {
   }
 
   // ✅ Proper API fetch
-  const res = await fetch(`http://localhost:5000/disasters/${id}`, {
+  // const res = await fetch(`http://localhost:5000/disasters/${id}`, {
+  //   cache: "no-store",
+  // });
+  const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/disasters/${id}`, {
     cache: "no-store",
   });
+  
 
   if (!res.ok) {
     return (
