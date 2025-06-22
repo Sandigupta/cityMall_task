@@ -71,7 +71,7 @@ cityMall_task/
 ### Disaster Management Endpoints
 
 #### Create Disaster Record
-**Endpoint**: `POST /disasters/new`
+**Endpoint**: `POST /disasters`
 
 Creates a new disaster record with automatic audit trail generation.
 
